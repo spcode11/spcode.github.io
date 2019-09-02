@@ -1,0 +1,18 @@
+{
+    "conteudo":[
+        {
+            "nome": "Faster Cep",
+            "descricao": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+            "backgroundCard": "assets/images/fastercep/bkg-fastercep.jpg",
+            "imagemDesktop": "assets/images/fastercep/fastercep-desktop.png",
+            "imagemMobile": "assets/images/fastercep/fastercep-mobile.png"
+        },
+        {
+            "nome": "Marcelo Fernandes",
+            "descricao": "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+            "backgroundCard": "assets/images/marcelo/bkg-marcelo-fernandes.jpg",
+            "imagemDesktop": "assets/images/fastercep/fastercep-desktop.png",
+            "imagemMobile": "assets/images/fastercep/fastercep-mobile.png"
+        }        
+    ]
+}

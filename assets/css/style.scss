@@ -1,0 +1,409 @@
+$white: #fff;
+$black: #000;
+$cor-padrao: #683140;
+$cor-padrao-hover: #000;
+$cor-btn-hover: #3e242f;
+$gray: #e5e5e5;
+$cinza: #aaa;
+$titulos: #484848;
+$margin-section: 2rem auto;
+$margin-titulos: 1rem 0;
+$body: #f9f9f9;
+
+%box-shadow {
+  -webkit-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin font-size($size) {
+  font-size: $size + px;
+  font-size: ($size/20) + rem;
+}
+
+@mixin input-placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    color: $color !important;
+  }
+
+  &:-moz-placeholder {
+    color: $color !important;
+  }
+
+  &::-moz-placeholder {
+    color: $color !important;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color !important;
+  }
+
+  &::-ms-placeholder {
+    color: $color !important;
+  }
+
+  &::placeholder {
+    color: $color !important;
+  }
+}
+
+/*Elementos que sofrerão transições*/
+a,
+button,
+figcaption,
+.pagination,
+.nav-item,
+.nav-link,
+.btn,
+.servico,
+.servico::before,
+nav {
+  transition: 0.3s all ease-out;
+  -o-transition: 0.3s all ease-out;
+  -moz-transition: 0.3s all ease-out;
+  -webkit-transition: 0.3s all ease-out;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+input,
+select,
+textarea {
+  height: auto;
+  border-radius: 0;
+}
+
+textarea {
+  max-height: 200px;
+}
+
+button:focus {
+  outline: none;
+}
+
+figure {
+  position: relative;
+
+  figcaption {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+// Lightbox
+
+
+.lb-outerContainer {
+  width: 50% !important;
+  height: 600px !important;
+  overflow-y: scroll;
+
+}
+
+.lb-image {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+html,
+body {
+  background-color: $body;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1;
+}
+
+p {
+  font-size: 1.15rem;
+  font-weight: 300;
+  margin-bottom: .5rem;
+  color: $titulos;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $titulos;
+}
+
+@media (min-width: 1200px) {
+
+  html,
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1199px) {
+
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    font-size: 13px;
+  }
+}
+
+header {
+  position: absolute;
+  z-index: 1;
+
+  .nav-item {
+    border-radius: .5rem;
+
+    .nav-link {
+      color: $white;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background-color: $black;
+    }
+  }
+}
+
+.btn {
+  white-space: normal;
+  padding: .5rem 1.5rem;
+  border-radius: 0;
+}
+
+.btn-contact {
+  background-color: lighten($cor-padrao, 10);
+  color: $white;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $cor-padrao;
+    border: 1px solid $cor-padrao;
+    color: $white;
+  }
+}
+
+footer {
+
+  background-color: $cor-padrao-hover;
+
+  h3 {
+    color: $white;
+  }
+
+  a,
+  i,
+  p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: $white;
+  }
+
+  .fab {
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $white;
+    }
+  }
+
+}
+
+#backToTop {
+  color: $white;
+  background-color: $cor-padrao-hover;
+}
+
+.banner {
+  width: 100%;
+
+  figure {
+
+    figcaption {
+      h1 {
+        font-size: 3rem;
+        color: $white;
+      }
+
+      h2 {
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.section-about {
+
+  .card {
+    border-radius: 0;
+    padding: 1rem;
+    background: $white;
+
+    &:hover {
+      background-color: $cor-padrao;
+      color: $white;
+      border: none;
+
+      p {
+        color: $white;
+      }
+
+    }
+
+    .card-content,
+    .card-body {
+      text-align: center;
+
+      i {
+        margin: 1rem 0;
+        font-size: 3rem;
+      }
+
+    }
+  }
+}
+
+.section-client {
+
+  h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .card {
+    border-radius: 0;
+    @extend %box-shadow;
+  }
+
+  .card-client {
+    transform: scale(1);
+    transition: all 300ms ease;
+    border-radius: 0;
+    padding: 1rem;
+    @extend %box-shadow;
+    color: $white;
+
+    p {
+      color: $white;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 300ms ease;
+    }
+  }
+
+  .slick-track {
+    height: 320px;
+
+    @media(min-width: 992px) {
+      height: 410px;
+    }
+  }
+
+  .modal {
+    align-items: center;
+
+    .modal-body {
+      .modal-item {
+        padding: 2rem;
+
+        i {
+          color: $titulos;
+        }
+
+        &:hover {
+          background-color: $cor-padrao-hover;
+
+          i {
+            color: $white;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.section-contact {
+
+  h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  .input-field {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  .input-field {
+
+    input,
+    textarea {
+      display: block;
+      border: none;
+      padding: 1rem 0;
+      border-bottom: solid 1px $gray;
+      -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+      transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, $cor-padrao-hover 4%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, $cor-padrao-hover 4%);
+      background-position: -200px 0;
+      background-size: 200px 100%;
+      background-repeat: no-repeat;
+      color: $cor-padrao-hover;
+
+      &:focus {
+        border-bottom: solid 1px $cor-padrao-hover;
+        box-shadow: none;
+        outline: none;
+      }
+    }
+
+
+    label {
+      color: #9e9e9e;
+      font-size: 1rem;
+      position: absolute;
+      top: 12px;
+      transition: .2s ease-out;
+    }
+  }
+}
